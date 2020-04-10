@@ -11,11 +11,6 @@ while True:
 
     program[course].append(student)
 
-
-def sorted_by_len_of_list():
-    return [len(x) for x in program]
-
-
 program_sorted = dict(sorted(program.items(), key=lambda x: len(x[1]), reverse=True))
 
 for key, value in program_sorted.items():
