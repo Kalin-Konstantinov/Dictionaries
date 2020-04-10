@@ -1,15 +1,11 @@
-resources = {}
+str_input = input()
+character_counts = {}
 
-while True:
-    command = input()
-    if command == "stop":
-        break
+for char in str_input:
+    if char != " ":
+        if char not in character_counts:
+            character_counts[char] = 0
+        character_counts[char] += 1
 
-    quantity = int(input())
-
-    if command not in resources:
-        resources[command] = 0
-    resources[command] += quantity
-
-for key, value in resources.items():
+for key, value in character_counts.items():
     print(f"{key} -> {value}")
